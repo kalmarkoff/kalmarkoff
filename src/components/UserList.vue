@@ -1,4 +1,4 @@
-<template>
+<!--<template>
   <table>
     <thead>
       <tr>
@@ -17,15 +17,22 @@
         <td>{{ item.id }}</td>
         <td>{{ item.firstName }}</td>
         <td>{{ item.email }}</td>
-        <td/>
-        <td/>
-        <td/>
-        <td/>
-        <td/>
       </tr>
     </tbody>
   </table>
+</template>-->
+
+<template>
+<div>
+  <div v-for="item in users" :key="item.id">
+    <div>
+      {{item.id}}
+    </div>
+  </div>
+</div>
 </template>
+
+
 <script>
 export default {
   name: "UserList",

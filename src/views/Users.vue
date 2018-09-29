@@ -3,7 +3,7 @@
     <h2>Spisok polzovateley</h2>
 
     <div v-if="!users.length" class="alert alert-warning">
-      loading...
+    loading...
     </div>
     <user-list v-else :users="users"/>
   </div>
@@ -13,22 +13,22 @@ import axios from "axios";
 import UserList from "@/components/UserList.vue";
 
 export default {
-  name: "UserList",
+  name: 'UserList',
   components: {
     UserList
   },
-  data: () => ({
-    users: []
+  data :()=>({
+    users:[]
   }),
-  mounted() {
-    this.loadUsers();
+  mounted(){
+    this.loadUsers()
   },
-  methods: {
-    loadUsers() {
-      axios.get("http:localhost:3004/users").then(response => {
-        this.users = response.data;
-      });
+  methods:{
+    loadUsers(){
+      axios.get("http://localhost:3004/users").then(response => {
+         this.users = response.data
+       })
     }
   }
-};
+}
 </script>
