@@ -1,11 +1,12 @@
 <template>
   <div>
-    <h2>Spisok polzovateley</h2>
-
-    <div v-if="!users.length" class="alert alert-warning">
-    loading...
+    <div>
+      <p>spisok polzovateley</p>
     </div>
-    <user-list v-else :users="users"/>
+    <div v-if="!users.length" class="alert alert-warning">
+      loading...
+    </div>
+    <user-list v-else :users="users" />
   </div>
 </template>
 <script>
